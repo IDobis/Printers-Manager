@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+arquivos.db
+.env
+
+node_modules/
+.next/
+out/
+.env.local
+*.log
+
+frontend/src-tauri/target/
+frontend/src-tauri/binaries/*.exe
+
+_frontend_git_backup/

@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="light"] {
+  --background: #f3f4f6;
+  --foreground: #111827;
+  --surface: #ffffff;
+  --surface-hover: #f9fafb;
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+[data-theme="dark"] {
+  --background: #0b1120;
+  --foreground: #f8fafc;
+  --surface: #111827;
+  --surface-hover: #1f2937;
+  --border: #374151;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 999px;
+  transition: background-color 0.35s ease;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+html,
+body {
+  scrollbar-color: transparent transparent;
+}
+
+/* Revelação com fade (classe controlada por JS) */
+html.show-scrollbar,
+html.show-scrollbar body {
+  scrollbar-color: rgba(100, 116, 139, 0.5) transparent;
+}
+
+html.show-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.45);
+}
+
+html.show-scrollbar *::-webkit-scrollbar-thumb:hover,
+html.show-scrollbar *::-webkit-scrollbar-thumb:active {
+  background-color: rgba(100, 116, 139, 0.7);
+}
+
+[data-theme="dark"].show-scrollbar,
+[data-theme="dark"].show-scrollbar body {
+  scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
+}
+
+[data-theme="dark"].show-scrollbar *::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.4);
+}
+
+[data-theme="dark"].show-scrollbar *::-webkit-scrollbar-thumb:hover,
+[data-theme="dark"].show-scrollbar *::-webkit-scrollbar-thumb:active {
+  background-color: rgba(148, 163, 184, 0.65);
+}
+
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.35) transparent;
+}
